@@ -9,9 +9,9 @@ Assignment 1
 """
 from graph import Graph
 import numpy as np
-# import os
-# os.chdir("TestCases/")
-# filenames = ["euc_100", "euc_250", "euc_500", "noneuc_100", "noneuc_250", "noneuc_500"]
+import os
+os.chdir("TestCases/")
+filenames = ["euc_100", "euc_250", "euc_500", "noneuc_100", "noneuc_250", "noneuc_500"]
 
 f=open("euc_100", "r")
 eu = f.readline().split()[0]
@@ -21,11 +21,10 @@ if eu=="euclidean":
     euclid = True
 else:
     euclid = False
-print euclid
+
 n = f.readline()
 n=int(n)
-print n
-#g = Graph(n)
+g = Graph(n)
 
 i=0
 coordinates = []
@@ -45,8 +44,8 @@ print(coordinates)
 print(distances)
 
 
-#g.graph = distances
+g.graph = distances
 
-#g.primMST()
+g.primMST()
 
 

@@ -5,7 +5,7 @@ import numpy as np
 from time import time
 from random import randint
 
-screenSize = 700
+# screenSize = 700
 
 def main():
 	#loading data
