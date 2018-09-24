@@ -18,7 +18,7 @@ def main():
 	path, length = algorithm( cities )
 	# algorithm(cities)
 	print(path)
-
+	# length = pow(length,0.5)
 	tottime = time() - start
 	print( "Found path of length %s in %s seconds" % ( round(length,2), round(tottime, 2) ) )
 

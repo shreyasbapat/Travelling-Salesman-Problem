@@ -16,6 +16,15 @@ class Graph():
         print ("Edge \tWeight")
         for i in range(1,self.V):
             print (parent[i],"-",i,"\t",self.graph[i][parent[i]])
+    
+    def dictiseMST(self, parent):
+        c = {}
+        for i in range(1,self.V):
+            if parent[i] not in c:
+                c[parent[i]] = [i]
+            else:
+                c[parent[i]].append(i)
+        return c
 
     def minKey(self, key, mstSet):
 
@@ -48,4 +57,5 @@ class Graph():
         # print(parent)
         # print("--------------------------------")
 
-        self.printMST(parent)
+        # self.printMST(parent)
+        return parent

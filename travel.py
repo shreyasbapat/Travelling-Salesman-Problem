@@ -3,7 +3,8 @@ from random import shuffle, randrange
 from time import time
 from numba import jit
 
-N_ITER = 10
+N_ITER = 2
+
 
 def algorithm(cities):
     best_order = []
@@ -41,7 +42,7 @@ def algorithm(cities):
 def calc_length(cities, path):
 	length = 0
 	for i in range( len(path) ):
-		length += dist_squared( cities[ path[i-1] ], cities[ path[i] ] )
+		length += (dist_squared( cities[ path[i-1] ], cities[ path[i] ] ))**0.5
 
 	return length
 
