@@ -20,9 +20,9 @@ def algorithm(cities):
         changed = True
         while changed:
             changed = False
-            for a in range(-1, cities.shape[0]):
+            for a in range(-1, cities.shape[0],2):
 
-                for b in range(a+1, cities.shape[0]):
+                for b in range(a+1, cities.shape[0],2):
 
                     new_order = order[:a] + order[a:b][::-1] + order[b:]
                     new_length = calc_length(cities, new_order)
